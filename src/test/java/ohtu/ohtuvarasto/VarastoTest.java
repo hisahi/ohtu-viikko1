@@ -26,6 +26,7 @@ public class VarastoTest {
         new Varasto(-1);
         new Varasto(10, 5);
         new Varasto(-1, 5);
+        new Varasto(10, -1);
         new Varasto(3, 5);
     }
 
