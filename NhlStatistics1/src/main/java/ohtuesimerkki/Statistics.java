@@ -36,13 +36,14 @@ public class Statistics {
     }
 
     public List<Player> topScorers(int howMany) {
+        int remaining = howMany;
         Collections.sort(players);
         ArrayList<Player> topScorers = new ArrayList<Player>();
         Iterator<Player> playerIterator = players.iterator();
         
-        while (howMany>0) { /* oli howMany>=0 mutta tämä rikkoi kaiken; bugi alkuperäisessä koodissa! */
+        while (remaining>0) { /* oli remaining>=0 mutta tämä rikkoi kaiken; bugi alkuperäisessä koodissa! */
             topScorers.add( playerIterator.next() );            
-            howMany--;
+            remaining--;
         }
         
         return topScorers;
